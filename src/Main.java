@@ -38,15 +38,20 @@ public class Main {
     }
     //Here we will check inputs with the regex method:
     public static boolean test (String acceptedInput){
-        Pattern pattern = Pattern.compile("\\d\\S[0-9]");
+        Pattern pattern = Pattern.compile("\\d\\S\\W[^\\w]\\n+");
         Matcher matcher = pattern.matcher(acceptedInput);
         System.out.println("A number is verified.");
 
         return matcher.matches ();
     }
+    //As I wanted to check shat was accepted into a massive, here is a method printing out accepted inputs;
+    //public static String printingOutNumbers (String AcceptedInput){
+     //   for (int i = 0; i<AcceptedInput.length; i++){
 
+     //   }
+    }
 
-}
+//}
 
 
 
